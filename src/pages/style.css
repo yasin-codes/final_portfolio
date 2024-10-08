@@ -1,0 +1,21 @@
+#spin:after {
+  content: "";
+  animation: spin 20s linear infinite;
+}
+@keyframes spin {
+  0% {
+    content: "Design Web.";
+  }
+  25% {
+    content: "do 3Ds.";
+  }
+  50% {
+    content: "Edit videos.";
+  }
+  75% {
+    content: "Doodle.";
+  }
+  100% {
+    content: "Design graphics.";
+  }
+}
