@@ -10,7 +10,7 @@ export default {
         },
       },
       animation: {
-        slideUp: "slideUp 1s ease-in-out 2s forwards",
+        slideUp: "slideUp 0.8s ease-in-out 2s forwards",
 
         "text-slide-2": "text-slide-2 5s cubic-bezier(0.83, 0, 0.17, 1) infinite",
         "text-slide-3": "text-slide-3 7.5s cubic-bezier(0.83, 0, 0.17, 1) infinite",

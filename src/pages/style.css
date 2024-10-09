@@ -1,6 +1,6 @@
 #spin:after {
   content: "";
-  animation: spin 20s linear infinite;
+  animation: spin 18s linear infinite;
 }
 @keyframes spin {
   0% {
