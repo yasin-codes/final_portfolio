@@ -4,12 +4,12 @@
 
 ::-webkit-scrollbar-track {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #888;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -18,7 +18,7 @@
 
 /* For Firefox */
 * {
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scrollbar-color: #888 #ffff;
 }
 
@@ -39,10 +39,11 @@ body {
 
 .scrollable-content::-webkit-scrollbar-track {
   background: #fff;
+  border-radius: 50%;
 }
 
 .scrollable-content::-webkit-scrollbar-thumb {
   background-color: #888;
-  border-radius: 10px;
+  border-radius: 50%;
   border: 3px solid #fff;
 }
