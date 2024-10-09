@@ -5,13 +5,14 @@ import Layout from "../layouts/Layout.astro";
 <!-- <div class="bg-white backdrop-blur-lg border-black border-b-4 h-screen w-screen absolute animate-slideUp z-50" id="loader"></div> -->
 <Layout title="title">
   <div class="max-w-5xl m-auto flex justify-center items-center">
-    <div class="relative z-0 space-y-14 h-[200vh] flex flex-col items-center justify-center" x-data="{ entered: '0' }">
+    <div class="relative z-0 space-y-14 h-[275vh] flex flex-col items-center justify-center" x-data="{ entered: '0' }">
       <!-- s-1 -->
       <section x-intersect.margin.-45%.0.-45%.0="entered = '0'" class="[--i:0] max-w-xl w-[576px] overflow-hidden" :style="`--e:${entered}`">
         <div
           class="relative h-96 bg-white rounded-2xl border border-slate-100 overflow-hidden transition-transform duration-700 ease-in-out z-[4] flex drop-shadow-[0_10px_5px_rgba(0,0,0,0.01)] justify-start items-end px-14 py-20"
           :class="entered >= 0 ? 'translate-y-0' : '-translate-y-[calc(100%*(var(--i)-var(--e)))]'"
         >
+          <!-- Card content -->
           <div class="flex flex-col gap-4">
             <p class="font-['Sora'] text-base flex gap-4 items-end">hi. <span class="text-xs opacity-20">01.Home</span></p>
             <div class="flex flex-col gap-0">
@@ -19,30 +20,36 @@ import Layout from "../layouts/Layout.astro";
               <p class="font-['Sora'] text-5xl font-semibold">I <span id="spin"></span></p>
             </div>
           </div>
-          <!-- Card content -->
         </div>
       </section>
       <!-- s-2 -->
-      <section x-intersect.margin.-40%.0.-45%.0="entered = '1'" class="[--i:1]" :style="`--e:${entered}`">
-        <div class="relative w-96 h-48 bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-[3]" :class="entered >= 1 ? 'translate-y-0' : '-translate-y-[calc(128%*(var(--i)-var(--e)))]'">
+      <section x-intersect.margin.-40%.0.-45%.0="entered = '1'" class="[--i:1] max-w-xl w-[576px] rotate-1 z-[3]" :style="`--e:${entered}`">
+        <div
+          class="h-96 bg-white rounded-2xl border border-slate-100 overflow-hidden transition-transform duration-700 ease-in-out z-[3] flex drop-shadow-[0_10px_5px_rgba(0,0,0,0.01)] justify-start items-end px-14 py-10"
+          :class="entered >= 1 ? 'translate-y-0' : '-translate-y-[calc(114%*(var(--i)-var(--e)))]'"
+        >
           <!-- Card content -->
+          <div class="flex flex-1 w w-full h-full bg-red-500">
+            <img/>
+          </div>
+          <div class="flex flex-1 w w-full h-full bg-blue-500"></div>
         </div>
       </section>
       <!-- s-3 -->
       <section x-intersect.margin.-40%.0.-45%.0="entered = '2'" class="[--i:2]" :style="`--e:${entered}`">
-        <div class="relative w-96 h-48 bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-[2]" :class="entered >= 2 ? 'translate-y-0' : '-translate-y-[calc(128%*(var(--i)-var(--e)))]'">
+        <div class="relative w-96 h-96 bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-[2]" :class="entered >= 2 ? 'translate-y-0' : '-translate-y-[calc(114%*(var(--i)-var(--e)))]'">
           <!-- Card content -->
         </div>
       </section>
       <!-- s-4 -->
       <section x-intersect.margin.-40%.0.-45%.0="entered = '3'" class="[--i:3]" :style="`--e:${entered}`">
-        <div class="relative w-96 h-48 bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-[1]" :class="entered >= 3 ? 'translate-y-0' : '-translate-y-[calc(128%*(var(--i)-var(--e)))]'">
+        <div class="relative w-96 h-96 bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-[1]" :class="entered >= 3 ? 'translate-y-0' : '-translate-y-[calc(114%*(var(--i)-var(--e)))]'">
           <!-- Card content -->
         </div>
       </section>
       <!-- s-5 -->
       <section x-intersect.margin.-40%.0.-45%.0="entered = '4'" class="[--i:4]" :style="`--e:${entered}`">
-        <div class="relative w-96 h-48 bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-[0]" :class="entered >= 4 ? 'translate-y-0' : '-translate-y-[calc(128%*(var(--i)-var(--e)))]'">
+        <div class="relative w-96 h-96 bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-[0]" :class="entered >= 4 ? 'translate-y-0' : '-translate-y-[calc(114%*(var(--i)-var(--e)))]'">
           <!-- Card content -->
         </div>
       </section>
