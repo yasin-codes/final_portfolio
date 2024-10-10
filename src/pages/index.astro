@@ -181,7 +181,7 @@ import Layout from "../layouts/Layout.astro";
 
 <!-- <div class="bg-white backdrop-blur-lg border-black border-b-4 h-screen w-screen absolute animate-slideUp z-50" id="loader"></div> -->
 <Layout title="title">
-  <div class="max-w-5xl m-auto flex justify-center items-center">
+  <div class="max-w-5xl m-auto flex justify-center items-center scale-[0.85] sm:scale-[1]">
     <div class="relative z-0 space-y-14 h-[275vh] flex flex-col items-center justify-center" x-data="{ entered: '0' }">
       <!-- s-1 -->
       <section x-intersect.margin.-45%.0.-45%.0="entered = '0'" class="[--i:0] max-w-xl w-[576px] overflow-hidden" :style="`--e:${entered}`">
