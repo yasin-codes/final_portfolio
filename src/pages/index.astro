@@ -121,6 +121,62 @@ import Layout from "../layouts/Layout.astro";
       width: 5rem;
     }
   }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeOutDown {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+
+  .fade-in {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+
+  .fade-out {
+    animation: fadeOutDown 0.5s ease-out forwards;
+  }
+
+  /* Initially hide the overlay and the zoomed image */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0); /* Dark background */
+    backdrop-filter: blur(10px); /* Apply blur to background */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  #overlay img {
+    max-width: 80vw;
+    max-height: 80vh;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+  }
+
+  #overlay.show {
+    display: flex; /* Show overlay when active */
+  }
 </style>
 
 <!-- <div class="bg-white backdrop-blur-lg border-black border-b-4 h-screen w-screen absolute animate-slideUp z-50" id="loader"></div> -->
@@ -344,12 +400,29 @@ import Layout from "../layouts/Layout.astro";
                 ></svg
               >
             </div>
-            <img src="https://images.unsplash.com/photo-1656231689958-9a004ac440d8?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-cover h-full rounded-md" />
-            <img src="https://images.unsplash.com/photo-1656232040608-6bd7d2cbc1e1?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-cover h-full rounded-md" />
-            <img src="https://images.unsplash.com/photo-1656231922827-7bc380cb8ed0?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-cover h-full rounded-md" />
-            <img src="https://images.unsplash.com/photo-1656231988688-257847a927f8?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-cover h-full rounded-md" />
-            <img src="https://images.unsplash.com/photo-1656231988688-257847a927f8?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-cover h-full rounded-md" />
-            <img src="https://images.unsplash.com/photo-1656231664684-131a884e8b69?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-cover h-full rounded-md" />
+            <img id="zoom" src="/public/vesp2.png" alt="" class="object-cover h-full rounded-md cursor-zoom-in aspect-square" />
+            <div class="h-full flex flex-col font-['Sora']">
+              <h1 class="font-semibold text-xl">Lorem</h1>
+              <p class="font-light text-xs w-52">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci fugiat sint nisi ex! Tempore, ab eaque numquam sequi dolorem iste at exercitationem commodi possimus consectetur veritatis ipsum assumenda pariatur provident!</p>
+            </div>
+            <img id="zoom" src="https://images.unsplash.com/photo-1656231922827-7bc380cb8ed0?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-cover h-full rounded-md cursor-zoom-in" />
+            <div class="h-full flex flex-col font-['Sora']">
+              <h1 class="font-semibold text-xl">Lorem</h1>
+              <p class="font-light text-xs w-52">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci fugiat sint nisi ex! Tempore, ab eaque numquam sequi dolorem iste at exercitationem commodi possimus consectetur veritatis ipsum assumenda pariatur provident!</p>
+            </div>
+            <img id="zoom" src="https://images.unsplash.com/photo-1656231988688-257847a927f8?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-cover h-full rounded-md cursor-zoom-in" />
+            <div class="h-full flex flex-col font-['Sora'] justify-between">
+              <div>
+                <h1 class="font-semibold text-xl">Lorem</h1>
+                <p class="font-light text-xs w-52">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci fugiat sint nisi ex! Tempore, ab eaque numquam sequi dolorem iste at exercitationem commodi possimus consectetur veritatis ipsum assumenda pariatur provident!</p>
+              </div>
+              <a href="#" class="rounded-lg p-2 px-4 text-xs flex items-center justify-center border border-slate-200 text-slate-700 hover:text-black hover:bg-slate-100 hover:border-slate-300 transition duration-150">View Live </a>
+            </div>
+            <img id="zoom" src="https://images.unsplash.com/photo-1656231664684-131a884e8b69?q=80&w=1962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="object-cover h-full rounded-md cursor-zoom-in" />
+            <div class="h-full flex flex-col font-['Sora']">
+              <h1 class="font-semibold text-xl">Lorem</h1>
+              <p class="font-light text-xs w-52">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci fugiat sint nisi ex! Tempore, ab eaque numquam sequi dolorem iste at exercitationem commodi possimus consectetur veritatis ipsum assumenda pariatur provident!</p>
+            </div>
           </div>
         </div>
       </section>
@@ -404,6 +477,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 
+  <div id="overlay"></div>
   <script>
     const root = document.documentElement;
     const marqueeElementsDisplayed = Number(getComputedStyle(root).getPropertyValue("--marquee-elements-displayed"));
@@ -446,6 +520,34 @@ import Layout from "../layouts/Layout.astro";
     // Add click event listeners to all back buttons
     backButtons.forEach((button) => {
       button.addEventListener("click", showCategory);
+    });
+  </script>
+
+  <script>
+    // Get all images with id of "zoom"
+    document.querySelectorAll("#zoom").forEach((img) => {
+      img.addEventListener("click", function () {
+        const overlay = document.getElementById("overlay");
+        overlay.innerHTML = ""; // Clear the overlay content
+
+        // Create a new image element
+        const zoomedImg = new Image();
+        zoomedImg.src = this.src; // Use the source of the clicked image
+
+        // Remove any Tailwind aspect classes like aspect-w-* or aspect-h-*
+        const clonedClassList = [...this.classList].filter((className) => !className.startsWith("aspect-"));
+        zoomedImg.classList.add(...clonedClassList); // Add back non-aspect classes
+
+        zoomedImg.style.cursor = "zoom-out"; // Change cursor to indicate zoom-out
+
+        overlay.appendChild(zoomedImg);
+        overlay.classList.add("show"); // Show the overlay
+
+        // Add click event to close the zoomed image and hide the overlay
+        overlay.addEventListener("click", function () {
+          overlay.classList.remove("show");
+        });
+      });
     });
   </script>
 
