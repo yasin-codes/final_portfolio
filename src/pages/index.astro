@@ -33,12 +33,12 @@ import Layout from "../layouts/Layout.astro";
             <div class="flex flex-1 w w-full h-full">
               <img class="w-full h-full rounded-md object-cover" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="me" />
             </div>
-            <div class="flex flex-col flex-1 w-full h-full gap-2">
+            <div class="flex flex-col flex-1 w-full h-full gap-2 font-['Sora']">
               <p class="text-xs opacity-20">02.me</p>
               <h1 class="font-['Libre_caslon_text'] text-4xl italic font-medium pb-4">About Me</h1>
               <div class="flex flex-col gap-2">
-                <p class="text-[13px]">I enjoy making illustration, 3D,graphic, and motion design. At the moment, I'm learning Framer, NextJS, React, and Vanilla Javascript.</p>
-                <p class="text-[13px] pb-5">In my free time, I like to look for ideas to keep my creativity. I also enjoy playing video games and riding my bike.</p>
+                <p class="text-[12px] font-light">I enjoy making illustration, 3D,graphic, and motion design. At the moment, I'm learning Framer, NextJS, React, and Vanilla Javascript.</p>
+                <p class="text-[12px] font-light pb-5">In my free time, I like to look for ideas to keep my creativity. I also enjoy playing video games and riding my bike.</p>
               </div>
               <div class="w-full h-full flex gap-2">
                 <a href="#" class="w-full h-full opacity-60 hover:opacity-100 bg-white hover:bg-zinc-100 transition duration-150 border border-zinc-200 hover:border-zinc-200 rounded-lg flex justify-center items-center p-2">
@@ -191,24 +191,21 @@ import Layout from "../layouts/Layout.astro";
             <div class="flex flex-col gap-0 w-full h-full items-center justify-center">
               <div class="font-['Libre_caslon_text'] text-5xl italic font-medium pb-10 w-fit">Featured Works</div>
               <div class="flex gap-2 w-full h-full">
-                <a
-                  href="#"
+                <button
                   class="px-3 bg-[url('https://images.unsplash.com/photo-1660398437075-3192abcc8480?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover w-full py-2 rounded-md hover:scale-95 transition-all text-sm font-medium text-neutral-600 relative z-[9999999999] data-[tooltip]:after:content-[attr(data-tooltip)] data-[tooltip]:after:invisible data-[tooltip]:after:scale-50 data-[tooltip]:after:origin-bottom data-[tooltip]:after:opacity-0 hover:data-[tooltip]:after:visible hover:data-[tooltip]:after:opacity-100 hover:data-[tooltip]:after:scale-100 data-[tooltip]:after:transition-all data-[tooltip]:after:absolute data-[tooltip]:after:bg-black data-[tooltip]:after:bottom-[calc(100%+4px)] data-[tooltip]:after:left-1/2 data-[tooltip]:after:-translate-x-1/2 data-[tooltip]:after:-z-[1] data-[tooltip]:after:px-1.5 data-[tooltip]:after:py-1 data-[tooltip]:after:min-h-fit data-[tooltip]:after:min-w-fit data-[tooltip]:after:rounded-md data-[tooltip]:after:drop-shadow data-[tooltip]:before:drop-shadow data-[tooltip]:after:text-center data-[tooltip]:after:text-white data-[tooltip]:after:whitespace-nowrap data-[tooltip]:after:text-[14px] data-[tooltip]:before:invisible data-[tooltip]:before:opacity-0 hover:data-[tooltip]:before:visible hover:data-[tooltip]:before:opacity-100 data-[tooltip]:before:transition-all data-[tooltip]:before:bg-black data-[tooltip]:before:[clip-path:polygon(100%_0,0_0,50%_100%)] data-[tooltip]:before:absolute data-[tooltip]:before:bottom-full data-[tooltip]:before:left-1/2 data-[tooltip]:before:-translate-x-1/2 data-[tooltip]:before:z-0 data-[tooltip]:before:w-3 data-[tooltip]:before:h-[4px]"
                   data-tooltip="UI.UX/Graphic"
                 >
-                </a>
-                <a
-                  href="#"
+                </button>
+                <button
                   class="px-3 bg-[url('https://images.unsplash.com/photo-1660398437061-d090b306000f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover w-full py-2 rounded-md hover:scale-95 transition-all text-sm font-medium text-neutral-600 relative z-[9999999999] data-[tooltip]:after:content-[attr(data-tooltip)] data-[tooltip]:after:invisible data-[tooltip]:after:scale-50 data-[tooltip]:after:origin-bottom data-[tooltip]:after:opacity-0 hover:data-[tooltip]:after:visible hover:data-[tooltip]:after:opacity-100 hover:data-[tooltip]:after:scale-100 data-[tooltip]:after:transition-all data-[tooltip]:after:absolute data-[tooltip]:after:bg-black data-[tooltip]:after:bottom-[calc(100%+4px)] data-[tooltip]:after:left-1/2 data-[tooltip]:after:-translate-x-1/2 data-[tooltip]:after:-z-[1] data-[tooltip]:after:px-1.5 data-[tooltip]:after:py-1 data-[tooltip]:after:min-h-fit data-[tooltip]:after:min-w-fit data-[tooltip]:after:rounded-md data-[tooltip]:after:drop-shadow data-[tooltip]:before:drop-shadow data-[tooltip]:after:text-center data-[tooltip]:after:text-white data-[tooltip]:after:whitespace-nowrap data-[tooltip]:after:text-[14px] data-[tooltip]:before:invisible data-[tooltip]:before:opacity-0 hover:data-[tooltip]:before:visible hover:data-[tooltip]:before:opacity-100 data-[tooltip]:before:transition-all data-[tooltip]:before:bg-black data-[tooltip]:before:[clip-path:polygon(100%_0,0_0,50%_100%)] data-[tooltip]:before:absolute data-[tooltip]:before:bottom-full data-[tooltip]:before:left-1/2 data-[tooltip]:before:-translate-x-1/2 data-[tooltip]:before:z-0 data-[tooltip]:before:w-3 data-[tooltip]:before:h-[4px]"
                   data-tooltip="3D/Illustration"
                 >
-                </a>
-                <a
-                  href="#"
+                </button>
+                <button
                   class="px-3 bg-[url('https://images.unsplash.com/photo-1660399777222-ef0ff519705f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover w-full py-2 rounded-md hover:scale-95 transition-all text-sm font-medium text-neutral-600 relative z-[9999999999] data-[tooltip]:after:content-[attr(data-tooltip)] data-[tooltip]:after:invisible data-[tooltip]:after:scale-50 data-[tooltip]:after:origin-bottom data-[tooltip]:after:opacity-0 hover:data-[tooltip]:after:visible hover:data-[tooltip]:after:opacity-100 hover:data-[tooltip]:after:scale-100 data-[tooltip]:after:transition-all data-[tooltip]:after:absolute data-[tooltip]:after:bg-black data-[tooltip]:after:bottom-[calc(100%+4px)] data-[tooltip]:after:left-1/2 data-[tooltip]:after:-translate-x-1/2 data-[tooltip]:after:-z-[1] data-[tooltip]:after:px-1.5 data-[tooltip]:after:py-1 data-[tooltip]:after:min-h-fit data-[tooltip]:after:min-w-fit data-[tooltip]:after:rounded-md data-[tooltip]:after:drop-shadow data-[tooltip]:before:drop-shadow data-[tooltip]:after:text-center data-[tooltip]:after:text-white data-[tooltip]:after:whitespace-nowrap data-[tooltip]:after:text-[14px] data-[tooltip]:before:invisible data-[tooltip]:before:opacity-0 hover:data-[tooltip]:before:visible hover:data-[tooltip]:before:opacity-100 data-[tooltip]:before:transition-all data-[tooltip]:before:bg-black data-[tooltip]:before:[clip-path:polygon(100%_0,0_0,50%_100%)] data-[tooltip]:before:absolute data-[tooltip]:before:bottom-full data-[tooltip]:before:left-1/2 data-[tooltip]:before:-translate-x-1/2 data-[tooltip]:before:z-0 data-[tooltip]:before:w-3 data-[tooltip]:before:h-[4px]"
                   data-tooltip="Motion/Videos"
                 >
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -232,28 +229,52 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </section>
       <!-- s-5 -->
-      <section x-intersect.margin.-40%.0.-45%.0="entered = '4'" class="[--i:4]" :style="`--e:${entered}`">
-        <div class="relative w-96 h-96 bg-slate-800 rounded-2xl border border-slate-700 overflow-hidden transition-transform duration-700 ease-in-out z-[0]" :class="entered >= 4 ? 'translate-y-0' : '-translate-y-[calc(114%*(var(--i)-var(--e)))]'">
+      <section x-intersect.margin.-40%.0.-45%.0="entered = '4'" class="[--i:4] max-w-xl w-[576px]" :style="`--e:${entered}`">
+        <div
+          class="relative h-96 bg-white rounded-2xl border border-slate-100 overflow-hidden transition-transform duration-700 ease-in-out z-[0] flex drop-shadow-[0_10px_5px_rgba(0,0,0,0.01)] justify-center items-start px-14 py-14"
+          :class="entered >= 4 ? 'translate-y-0' : '-translate-y-[calc(114%*(var(--i)-var(--e)))]'"
+        >
           <!-- Card content -->
+          <div class="flex gap-8 h-full w-fit">
+            <div class="flex flex-col flex-1 w-full h-full basis-3/12">
+              <form class="font-['Sora'] flex flex-col justify-between h-full w-full flex-1 gap-1" action="mailto:yasinwork@gmail.com" method="post" enctype="text/plain">
+                <label for="name" class="text-xs font-semibold">Name</label><br />
+                <input type="text" id="name" name="name" placeholder="person..." class="mb-2 rounded-lg border-zinc-100 border px-2 py-2 text-xs font-light" /><br />
+                <label for="email" class="text-xs font-semibold">Email</label><br />
+                <input type="email" id="email" name="email" class="mb-2 rounded-lg border-zinc-100 border px-2 py-2 text-xs font-light" placeholder="example@example.com" />
+                <label for="message" class="text-xs font-semibold">Message</label><br />
+                <input type="text" id="message" name="message" class="mb-2 rounded-lg border-zinc-100 border px-2 py-2 text-xs font-light" placeholder="I like peanuts" />
+                <input type="submit" value="submit" class="text-sm py-3 bg-slate-800 hover:bg-slate-950 rounded-lg flex justify-center items-center text-white transition duration-150 cursor-pointer" />
+              </form>
+            </div>
+
+            <div class="flex flex-col flex-1 w-full h-full gap-2 basis-2/12">
+              <p class="text-xs opacity-20">05.Contact</p>
+              <h1 class="font-['Libre_caslon_text'] text-3xl italic font-medium pb-2">Let's Connect.</h1>
+              <div class="flex flex-col gap-2 font-['Sora'] pb-2">
+                <p class="text-[12px] font-light">Feel free to hit me up if you have a project in mind, or just wanna say Hello.</p>
+                <p class="text-[12px] font-light pt-5">you can also reach to me through my social medias btw :)</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
   </div>
-</Layout>
 
-<script>
-  const root = document.documentElement;
-  const marqueeElementsDisplayed = Number(getComputedStyle(root).getPropertyValue("--marquee-elements-displayed"));
-  const marqueeContent = document.querySelector("ul.marquee-content");
+  <script>
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = Number(getComputedStyle(root).getPropertyValue("--marquee-elements-displayed"));
+    const marqueeContent = document.querySelector("ul.marquee-content");
 
-  root.style.setProperty("--marquee-elements", marqueeContent.children.length.toString());
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length.toString());
 
-  for (let i = 0; i < marqueeElementsDisplayed; i++) {
-    marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
-  }
-</script>
+    for (let i = 0; i < marqueeElementsDisplayed; i++) {
+      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    }
+  </script>
 
-<!-- <script>
+  <!-- <script>
   //
   function createKeyframes(name, keyframes) {
     const style = document.createElement("style");
@@ -349,4 +370,5 @@ import Layout from "../layouts/Layout.astro";
   //
 </script> -->
 
-<!-- <div class="container max-w-xl h-96 bg-white rounded-2xl border-[1px] border-slate-100 flex drop-shadow-[0_10px_5px_rgba(0,0,0,0.01)] justify-start items-end px-14 py-20"></div> -->
+  <!-- <div class="container max-w-xl h-96 bg-white rounded-2xl border-[1px] border-slate-100 flex drop-shadow-[0_10px_5px_rgba(0,0,0,0.01)] justify-start items-end px-14 py-20"></div> -->
+</Layout>
