@@ -2,6 +2,127 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
+<style>
+  #spin:after {
+    content: "";
+    animation: spin 18s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      content: "Design Web.";
+    }
+    25% {
+      content: "do 3Ds.";
+    }
+    50% {
+      content: "Edit videos.";
+    }
+    75% {
+      content: "Doodle.";
+    }
+    100% {
+      content: "Design graphics.";
+    }
+  }
+
+  .anim-underline-fx {
+    color: #242424;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #242424 50%, #e5e7eb 10%);
+    background-size: 200% 3px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    transition: background-position 0.3s;
+  }
+
+  .anim-underline-fx:hover {
+    background-position: 0% 100%;
+  }
+
+  :root {
+    --marquee-width: 26vw;
+    --marquee-height: 5vh;
+    /* --marquee-elements: 12; */ /* defined with JavaScript */
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+  }
+
+  .marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+  }
+  .marquee:before,
+  .marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+  }
+  .marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #fff 0%, transparent 100%);
+  }
+  .marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #fff 0%, transparent 100%);
+  }
+  .marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+  }
+  /* .marquee-content:hover {
+  animation-play-state: paused;
+} */
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+    }
+  }
+  .marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    max-height: 100%;
+    font-size: calc(var(--marquee-height) * 3 / 4); /* 5rem; */
+    white-space: nowrap;
+  }
+
+  .marquee-content li img {
+    width: 100%;
+    /* height: 100%; */
+    border: 2px solid #eee;
+  }
+
+  @media (max-width: 600px) {
+    html {
+      font-size: 12px;
+    }
+    :root {
+      --marquee-width: 100vw;
+      --marquee-height: 16vh;
+      --marquee-elements-displayed: 3;
+    }
+    .marquee:before,
+    .marquee:after {
+      width: 5rem;
+    }
+  }
+</style>
+
 <!-- <div class="bg-white backdrop-blur-lg border-black border-b-4 h-screen w-screen absolute animate-slideUp z-50" id="loader"></div> -->
 <Layout title="title">
   <div class="max-w-5xl m-auto flex justify-center items-center">
